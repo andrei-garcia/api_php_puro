@@ -1,7 +1,7 @@
 <?php
     require   "../vendor/autoload.php";
     header("Content-Type: application/json");
-
+    
     try {
         
          if(!isset($_GET['url']))
@@ -15,8 +15,13 @@
         unset($routes[0]);
         $controler = isset($routes[1])? $routes[1] : "";
         $method = strtolower($_SERVER['REQUEST_METHOD']);
-        $param = isset($routes[2])? $routes[2] : "";;
         
+        if($method === 'get'){
+            $param = isset($routes[2])? $routes[2] : "";
+        }elseif($method === 'post'){
+            $param = $_POST;
+        }
+       
         $classNameControllerApi = "Api\Controlers\\".ucfirst($controler)."Controler";
         
         if(!class_exists($classNameControllerApi))

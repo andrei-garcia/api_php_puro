@@ -10,8 +10,9 @@ class CampanhaControler {
         return $campanha->select($id);
     }
 
-    public function post(){
-
+    public static function post($params){
+        $campanha = new CampanhaModels;
+        return $campanha->insert($params);
     }
 
     public function delete(){

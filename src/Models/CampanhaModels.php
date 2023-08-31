@@ -3,6 +3,7 @@
 namespace Api\Models;
 
 use Api\Models\DatabaseApi;
+use Api\Models\ValidateCampanha;
 class CampanhaModels {
 
     private $table = "campanha";
@@ -16,13 +17,26 @@ class CampanhaModels {
             $filtro = [
                 "id[=]" => $id
             ];
-            
+
         $ret = $database->select($this->table,"*",$filtro);
 
         if(empty($ret))
-            $ret = "Nenhuma informação encontrada";
+            throw new \Exception("Nenhuma informação encontrada");
 
         return json_encode($ret);
+    }
+
+    public function insert($params)
+    {
+        $database = new DatabaseApi();
+        $validate = new ValidateCampanha();
+        $validate->validate($params);
+
+        $ret = $database->insert($this->table,$params);
+        if($ret->rowCount() == 0){
+            throw new \Exception("Erro ao inserir campanha");
+        }
+        return "campanha inserida com sucesso";
     }
 
 }
