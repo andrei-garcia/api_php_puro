@@ -2,10 +2,12 @@
 
 namespace Api\Controlers;
 
+use Api\Models\CampanhaModels;
 class CampanhaControler {
     
-    public function get(){
-        echo "teste 2";
+    public static function get($id){
+        $campanha = new CampanhaModels;
+        return $campanha->select($id);
     }
 
     public function post(){
