@@ -26,6 +26,11 @@ class ValidateCampanha {
             }
         }
 
+        $this->validaObrigatorios();
+
+   }
+
+   private function validaObrigatorios(){
         $obrigatoriosNaoPrenchidos = [];
         foreach ($this->dadosNaoEncontradosObrigatorios as $key => $value) {
             if($value)
@@ -35,7 +40,7 @@ class ValidateCampanha {
         if(count($obrigatoriosNaoPrenchidos) > 0)
             throw new \Exception("Campos obrigatórios não preenchidos: ".implode(',',$obrigatoriosNaoPrenchidos));
 
-   }
+    }
 
    private function validaPublico($value){
         $this->dadosNaoEncontradosObrigatorios['publico'] = false;

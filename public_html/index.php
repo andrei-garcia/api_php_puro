@@ -15,11 +15,19 @@
         unset($routes[0]);
         $controler = isset($routes[1])? $routes[1] : "";
         $method = strtolower($_SERVER['REQUEST_METHOD']);
-        
-        if($method === 'get'){
+        $id = "";
+
+        if($method === 'get' || $method === 'delete'){
             $param = isset($routes[2])? $routes[2] : "";
-        }elseif($method === 'post'){
+        }
+        
+        if($method === 'post'){
             $param = $_POST;
+        }
+
+        if($method === 'put'){
+            parse_str(file_get_contents('php://input'), $param);
+            $id = isset($routes[2])? $routes[2] : "";
         }
        
         $classNameControllerApi = "Api\Controlers\\".ucfirst($controler)."Controler";
@@ -29,7 +37,7 @@
 
         echo json_encode([
             "status" => "sucess",
-            "response" => call_user_func([$classNameControllerApi,$method],$param)
+            "response" => call_user_func([$classNameControllerApi,$method],$param,$id)
         ],JSON_UNESCAPED_UNICODE);
         http_response_code(200);
         exit;   

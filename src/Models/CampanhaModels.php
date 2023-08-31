@@ -39,4 +39,32 @@ class CampanhaModels {
         return "campanha inserida com sucesso";
     }
 
+    public function update($params, $id)
+    {
+        
+        $this->select($id);
+        $database = new DatabaseApi();
+        $validate = new ValidateCampanha();
+        $validate->validate($params);
+
+        $ret = $database->update($this->table,$params,["id[=]" => $id]);
+        if($ret->rowCount() == 0){
+            throw new \Exception("Erro ao atualizar dados da campanha");
+        }
+        return "campanha atualizada com sucesso";
+    }
+
+    public function delete($id)
+    {
+        
+        $this->select($id);
+        $database = new DatabaseApi();
+
+        $ret = $database->delete($this->table,["id[=]" => $id]);
+        if($ret->rowCount() == 0){
+            throw new \Exception("Erro ao remover dados da campanha");
+        }
+        return "campanha removida com sucesso";
+    }
+
 }

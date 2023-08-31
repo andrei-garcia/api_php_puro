@@ -15,11 +15,13 @@ class CampanhaControler {
         return $campanha->insert($params);
     }
 
-    public function delete(){
-
+    public static function delete($id){
+        $campanha = new CampanhaModels;
+        return $campanha->delete($id);
     }
 
-    public function update(){
-
+    public static function put($params, $id){
+        $campanha = new CampanhaModels;
+        return $campanha->update($params,$id);
     }
 }
