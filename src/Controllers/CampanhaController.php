@@ -1,9 +1,9 @@
 <?php
 
-namespace Api\Controlers;
+namespace Api\Controllers;
 
 use Api\Models\CampanhaModels;
-class CampanhaControler {
+class CampanhaController {
     
     public static function get($id){
         $campanha = new CampanhaModels;

@@ -30,7 +30,7 @@
             $id = isset($routes[2])? $routes[2] : "";
         }
        
-        $classNameControllerApi = "Api\Controlers\\".ucfirst($controler)."Controler";
+        $classNameControllerApi = "Api\Controllers\\".ucfirst($controler)."Controller";
         
         if(!class_exists($classNameControllerApi))
             throw new Exception("Erro de requisição, api não implementada");
