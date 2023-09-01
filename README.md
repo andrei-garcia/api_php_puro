@@ -7,7 +7,7 @@ Cria um banco local no Mysql com os dados com o seguinte comando:
 
 CREATE DATABASE `api` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */
 
-Importar o dum do arquivo:  api.sql
+Importar o dump do arquivo:  api.sql
 
 Utilizando a Api:
 
