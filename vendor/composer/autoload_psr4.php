@@ -7,6 +7,9 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'ReallySimpleJWT\\' => array($vendorDir . '/rbdwllr/reallysimplejwt/src'),
+    'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
     'Medoo\\' => array($vendorDir . '/catfan/medoo/src'),
+    'Doctrine\\Instantiator\\' => array($vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator'),
+    'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
     'Api\\' => array($baseDir . '/src'),
 );

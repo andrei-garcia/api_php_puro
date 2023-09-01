@@ -66,6 +66,12 @@ Este é um exemplo de construção de uma API simples utilizando PHP puro. A API
    - Utilize o arquivo `teste_postman.json` com testes pré-configurados no Postman.
    - Faça as chamadas conforme necessário e verifique as respostas.
 
+## Testes Unitários
+
+- rodar no terminal da raiz do projeto: vendor/bin/phpunit Test
+- Implementar classes de testes unitários dentro da pasta Test
+- Classe CampanhaTest implementada pra alguns testes
+
 ## Melhorias Futuras
 
 - Implementação da API com um framework, como o Laravel, para melhor organização e escalabilidade.
