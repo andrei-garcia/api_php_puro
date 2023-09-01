@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "933587a5-1369-4ffb-8453-020cfbd94840",
+		"name": "Teste Api PHP Puro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23523678"
+	},
+	"item": [
+		{
+			"name": "pegar api key",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "obter token",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get campanha",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "campanha por id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/Api/api_php_puro/public_html/api/campanha/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Api",
+								"api_php_puro",
+								"public_html",
+								"api",
+								"campanha",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 31 Aug 2023 23:13:18 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.0.25"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.25"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "224"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"sucess\",\n    \"response\": \"[{\\\"id\\\":\\\"5\\\",\\\"nome\\\":\\\"teste via api\\\",\\\"orcamento\\\":\\\"444.44\\\",\\\"publico\\\":\\\"geral\\\",\\\"dt_inicio\\\":\\\"2022-12-15 00:00:00\\\",\\\"dt_fim\\\":\\\"2023-01-15 20:00:00\\\",\\\"status\\\":\\\"em andamento\\\"}]\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get todas campanhas",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "todas campanhas",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/Api/api_php_puro/public_html/api/campanha",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Api",
+								"api_php_puro",
+								"public_html",
+								"api",
+								"campanha"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 31 Aug 2023 23:14:51 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.0.25"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.25"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1380"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"sucess\",\n    \"response\": \"[{\\\"id\\\":\\\"5\\\",\\\"nome\\\":\\\"teste via api\\\",\\\"orcamento\\\":\\\"444.44\\\",\\\"publico\\\":\\\"geral\\\",\\\"dt_inicio\\\":\\\"2022-12-15 00:00:00\\\",\\\"dt_fim\\\":\\\"2023-01-15 20:00:00\\\",\\\"status\\\":\\\"em andamento\\\"},{\\\"id\\\":\\\"6\\\",\\\"nome\\\":\\\"teste via api\\\",\\\"orcamento\\\":\\\"444.44\\\",\\\"publico\\\":\\\"geral\\\",\\\"dt_inicio\\\":\\\"2022-12-15 00:00:00\\\",\\\"dt_fim\\\":\\\"2023-01-15 20:00:00\\\",\\\"status\\\":\\\"em andamento\\\"},{\\\"id\\\":\\\"7\\\",\\\"nome\\\":\\\"teste 2 via api\\\",\\\"orcamento\\\":\\\"444.44\\\",\\\"publico\\\":\\\"geral\\\",\\\"dt_inicio\\\":\\\"2022-12-15 00:00:00\\\",\\\"dt_fim\\\":\\\"2023-01-15 20:00:00\\\",\\\"status\\\":\\\"em andamento\\\"},{\\\"id\\\":\\\"8\\\",\\\"nome\\\":\\\"teste 2 via api\\\",\\\"orcamento\\\":\\\"444.44\\\",\\\"publico\\\":\\\"geral\\\",\\\"dt_inicio\\\":\\\"2022-12-15 00:00:00\\\",\\\"dt_fim\\\":\\\"2023-01-15 20:00:00\\\",\\\"status\\\":\\\"em andamento\\\"},{\\\"id\\\":\\\"9\\\",\\\"nome\\\":\\\"teste 2 via api\\\",\\\"orcamento\\\":\\\"444.44\\\",\\\"publico\\\":\\\"geral\\\",\\\"dt_inicio\\\":\\\"2022-12-15 00:00:00\\\",\\\"dt_fim\\\":\\\"2023-01-15 20:00:00\\\",\\\"status\\\":\\\"em andamento\\\"},{\\\"id\\\":\\\"10\\\",\\\"nome\\\":\\\"teste 2 via api\\\",\\\"orcamento\\\":\\\"444.44\\\",\\\"publico\\\":\\\"geral\\\",\\\"dt_inicio\\\":\\\"2022-12-15 00:00:00\\\",\\\"dt_fim\\\":\\\"2023-01-15 20:00:00\\\",\\\"status\\\":\\\"em andamento\\\"},{\\\"id\\\":\\\"11\\\",\\\"nome\\\":\\\"teste 2 via api ggg\\\",\\\"orcamento\\\":\\\"444.44\\\",\\\"publico\\\":\\\"geral\\\",\\\"dt_inicio\\\":\\\"2022-12-15 00:00:00\\\",\\\"dt_fim\\\":\\\"2023-01-15 20:00:00\\\",\\\"status\\\":\\\"em andamento\\\"}]\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete campanha",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "delete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/Api/api_php_puro/public_html/api/campanha/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Api",
+								"api_php_puro",
+								"public_html",
+								"api",
+								"campanha",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 31 Aug 2023 23:16:49 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.0.25"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.25"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "62"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"sucess\",\n    \"response\": \"campanha removida com sucesso\"\n}"
+				}
+			]
+		},
+		{
+			"name": "criar campanha",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
