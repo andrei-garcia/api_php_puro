@@ -23,7 +23,7 @@ class CampanhaModels {
         if(empty($ret))
             throw new \Exception("Nenhuma informação encontrada");
 
-        return json_encode($ret);
+        return $ret;
     }
 
     public function insert($params)

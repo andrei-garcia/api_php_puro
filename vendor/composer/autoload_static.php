@@ -11,6 +11,10 @@ class ComposerStaticInit4e12b23cddd69a95966bb6453201d573
     );
 
     public static $prefixLengthsPsr4 = array (
+        'R' => 
+        array (
+            'ReallySimpleJWT\\' => 16,
+        ),
         'M' => 
         array (
             'Medoo\\' => 6,
@@ -22,6 +26,10 @@ class ComposerStaticInit4e12b23cddd69a95966bb6453201d573
     );
 
     public static $prefixDirsPsr4 = array (
+        'ReallySimpleJWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rbdwllr/reallysimplejwt/src',
+        ),
         'Medoo\\' => 
         array (
             0 => __DIR__ . '/..' . '/catfan/medoo/src',
