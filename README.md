@@ -1,59 +1,74 @@
-# api_php_puro
-Construção de uma API implementando com PHP puro
+# API PHP Puro - Exemplo de Construção de API com PHP
 
-++Instruções de uso+++
+Este é um exemplo de construção de uma API simples utilizando PHP puro. A API permite consultar, criar, atualizar e excluir campanhas, usando autenticação de token Bearer para segurança. 
 
-Cria um banco local no Mysql com os dados com o seguinte comando: 
+## Instruções de Uso
 
-CREATE DATABASE `api` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */
+1. **Configuração do Banco de Dados**
 
-Importar o dump do arquivo:  api.sql
+   - Crie um banco de dados MySQL local com o nome `api`.
+   - Importe o dump do banco de dados a partir do arquivo `api.sql`.
 
-Utilizando a Api:
+2. **Obtenção do Access Token**
 
-Para utilizar o método de consultar as campanhas deve-se obter o access token:
-{url_localhost}/public_html/api/apiKey :
-    método GET 
-    busca a key para buscar o token
+   - Para utilizar os métodos da API, é necessário obter um access token.
+   - Acesse `{url_localhost}/public_html/api/apiKey` usando o método GET para obter a chave da API.
+   - Em seguida, utilize a chave obtida para acessar `{url_localhost}/public_html/api/token` via método POST e passando a chave no corpo da requisição para receber o token.
 
-{url_localhost}/public_html/api/token : 
-    método POST 
-    busca o access para válido para consultar a api
-    parametros body: api_key : contendo api key válida
+3. **Endpoints da API**
 
-{url_localhost}/public_html/api/campanha/{ID} : 
-    método GET 
-    busca os dados de uma campanha com id
-    parametros: id da campanha
-    retorno: json com dados da campanha
+   - **Obter Dados de uma Campanha por ID:**
 
-{url_localhost}/public_html/api/campanha/: 
-    método GET 
-    busca os dados de todas as campanhas da base
-    retorno: json com dados da campanha
+     ```
+     {url_localhost}/public_html/api/campanha/{ID}
+     Método: GET
+     Parâmetros: ID da campanha
+     Retorno: JSON com dados da campanha
+     ```
 
+   - **Obter Dados de Todas as Campanhas:**
 
-{url_localhost}/public_html/api/campanha/{ID}: 
-    método DELETE 
-    deleta uma campanha informando o id
-    retorno: json mensagem de sucesso ou erro
+     ```
+     {url_localhost}/public_html/api/campanha/
+     Método: GET
+     Retorno: JSON com dados de todas as campanhas
+     ```
 
-{url_localhost}/public_html/api/campanha: 
-    método POST 
-    Cria uma campanha
-    parametros do body: json contendo os dados da campanha
-    retorno: json mensagem de sucesso ou erro
+   - **Deletar uma Campanha por ID:**
 
-{url_localhost}/public_html/api/campanha/{ID}: 
-    método PUT 
-    altera os dadoe de uma campanha informando o id
-    parametros do body: json contendo os dados da campanha
-    retorno: json mensagem de sucesso ou erro
+     ```
+     {url_localhost}/public_html/api/campanha/{ID}
+     Método: DELETE
+     Parâmetros: ID da campanha
+     Retorno: JSON com mensagem de sucesso ou erro
+     ```
 
+   - **Criar uma Nova Campanha:**
 
-Testes via postman: utilizar o arquivo teste_postman.json com os testes prontos bastando mudar as chamadas e verificar os retornos.
+     ```
+     {url_localhost}/public_html/api/campanha
+     Método: POST
+     Parâmetros do Corpo: JSON contendo os dados da campanha
+     Retorno: JSON com mensagem de sucesso ou erro
+     ```
 
-Melhorias:
-Implementar com um framework utilizando rotas exemplo: Laravel
-Implementar testes unitário com PHPUnit
+   - **Atualizar uma Campanha por ID:**
 
+     ```
+     {url_localhost}/public_html/api/campanha/{ID}
+     Método: PUT
+     Parâmetros do Corpo: JSON contendo os dados da campanha
+     Retorno: JSON com mensagem de sucesso ou erro
+     ```
+
+4. **Testes**
+
+   - Utilize o arquivo `teste_postman.json` com testes pré-configurados no Postman.
+   - Faça as chamadas conforme necessário e verifique as respostas.
+
+## Melhorias Futuras
+
+- Implementação da API com um framework, como o Laravel, para melhor organização e escalabilidade.
+- Implementação de testes unitários utilizando PHPUnit para garantir a qualidade do código.
+
+Sinta-se à vontade para clonar e personalizar este exemplo de API de acordo com suas necessidades. Para sugestões e melhorias, fique à vontade para contribuir para este repositório.
