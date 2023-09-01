@@ -3,7 +3,7 @@ Construção de uma API implementando com PHP puro
 
 ++Instruções de uso+++
 
-Cria um banco local no Mysql com os dados com o seguinte comand: 
+Cria um banco local no Mysql com os dados com o seguinte comando: 
 
 CREATE DATABASE `api` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */
 
