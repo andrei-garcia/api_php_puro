@@ -1,1 +1,1 @@
-{"version":1,"defects":{"CampanhaTest::testObtemCampanha":4},"times":{"CampanhaTest::testObtemCampanhas":0.055,"CampanhaTest::testObtemCampanha":0.007}}
+{"version":1,"defects":{"CampanhaTest::testObtemCampanha":4,"CampanhaTest::testDeleteCampanha":4},"times":{"CampanhaTest::testObtemCampanhas":0.018,"CampanhaTest::testObtemCampanha":0.044,"CampanhaTest::testDeleteCampanha":0.004}}
